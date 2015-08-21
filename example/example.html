@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Bootstrap core CSS -->
+        <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            .outer {background: lightgreen; background-clip:content-box;}
+            .text-autofit {background: green; color: white;}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Auto-adjusted containerbased text size</h1>
+            <p>
+                 The text size is adjusted such that the text fits perfectly in is container without
+                 a linebreak.
+                 Also a mimimum textsize can be given. In this case The textsize is adjusted such that
+                 the text fits perfectly in is container without an additional linebreak.
+            </p>
+            <h2>Spans</h2>
+            <div class="row">
+                <div class="col-sm-6 outer">
+                    <span class="text-autofit">col-sm-6 container</span>
+                </div>
+                <div class="col-sm-4 outer">
+                    <span class="text-autofit">col-sm-4 container</span>
+                </div>
+                <div class="col-sm-2 outer">
+                    <span class="text-autofit">col-sm-2 container</span>
+                </div>
+            </div>
+            <h2>Fixed width</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div style="width: 300px" class="outer">
+                        <h1><span class="text-autofit">300px h1 container</span></h1>
+                    </div>
+                    <div style="width: 300px" class="outer">
+                        <h2><span class="text-autofit">300px h2 container</span></h2>
+                    </div>
+                    <div style="width: 300px" class="outer">
+                        <span class="text-autofit">300px container</span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div style="width: 500px" class="outer">
+                        <h1><span class="text-autofit">500px h1 container</span></h1>
+                    </div>
+                    <div style="width: 500px" class="outer">
+                        <h2><span class="text-autofit">500px h2 container</span></h2>
+                    </div>
+                    <div style="width: 500px" class="outer">
+                        <span class="text-autofit">500px container</span>
+                    </div>
+                </div>
+            </div>
+            <h2>Spans with min size</h2>
+            <div class="row">
+                <div class="col-sm-6 outer">
+                    <span class="text-autofit" text-autofit-minsize="18px">col-sm-6 container</span>
+                </div>
+                <div class="col-sm-4 outer">
+                    <span class="text-autofit" text-autofit-minsize="18px">col-sm-4 container</span>
+                </div>
+                <div class="col-sm-2 outer">
+                    <span class="text-autofit" text-autofit-minsize="18px">col-sm-2 container</span>
+                </div>
+            </div>
+        </div>
+        <script src="../jTextAutofit.js"></script>
+    </body>
+</html>
